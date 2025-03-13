@@ -1,0 +1,48 @@
+% $y' + y = 2e^x + 4 \sin(x)$
+		\begin{align*}
+			\frac{d\lambda}{dx}e^{-x} &= 2e^x + 4sin(x) \\
+			\int d\lambda &= \int (2e^{2x} + 4e^x \sin(x)) \, dx \\
+			\int \, d\lambda &= \int 2e^{2x} \, dx + 4\int e^x \sin(x)) \, dx \\
+			\int \, d\lambda &= e^{2x} + C + 4 [-\cos(x)e^x + \int e^x\cos(x)\, dx]
+		\end{align*}
+		Soit $I = \int e^x\cos(x)\ $ \\
+		\[
+		\left\{
+		\begin{aligned}
+			u &= e^x \implies u'= e^x  \\
+			v &= -\cos(x) \implies v' = \sin(x)
+		\end{aligned}
+		\right.
+		\]
+		
+		$-\cos(x)e^x + \int e*x\cos(x)\, dx$
+		\[
+		\left\{
+		\begin{aligned}
+			u &= e^x \implies v'= \cos(x)  \\
+			u' &= e^x \implies v' = \sin(x)
+		\end{aligned}
+		\right.
+		\]
+		
+		\begin{align*}
+			-e^xcos(x) + -e^xsin(x) - \int e^x \sin(x)) \, dx \\
+			-e^xcos(x) + -e^xsin(x) - I \\
+			I &= e^x(sin(x) - cos(x)) - I \\
+			2I &= e^x(sin(x) - cos(x)) \\
+			I &= \frac{e^x}{2}(sin(x) - cos(x)) 
+		\end{align*}
+		
+		% Ligne vaovao 
+		\begin{align*}
+			\int \, d\lambda &= e^{2x} + c + 2e^x(sin(x) - cos(x)) + k \\
+			\lambda x &= e^{2x} + e^{2x} (\sin(x) - \cos(x)) + C \\
+			\lambda x &= e^{x} (e^{x} + 2(\sin(x) - \cos(x)) + C
+		\end{align*}
+		
+		% Ligne vaovao
+		\begin{align*}
+			y &= e^x.e^{-x} (e^{x} + 2(\sin(x) - \cos(x)) + Ce^{-x} \\
+			y &= e^x + 2\sin(x) - 2\cos(x) + Ce^{-x}
+		\end{align*}
+		\boxed{y = e^x + 2\sin(x) - 2\cos(x) + Ce^{-x}}

@@ -1,0 +1,13 @@
+% \item $x^2 y' = e^y$ \\
+		\begin{align*}
+			x^2 y' &= e^y \\
+			x^2 \frac{dy}{dx} &= e^y \\
+			\frac{dy}{e^y} &= \frac{dx}{x^2} \\
+			\int \frac{1}{e^{y}} \, dy &= \int \frac{1}{x^{2}} \, dx \\
+			\int e^{-y}\,dy &= \int x^{-2} \, dx \\
+			-e^{-y} &= -\frac{1}{x} + C, \quad C \in \mathbb{R} \\
+			\ln(e^{-y}) &= \ln \lvert \frac{1}{x} + C \rvert \\
+			-y &= \ln \lvert \frac{1}{x} + C \rvert \\
+			y &= -\ln \lvert \frac{1}{x} + C \rvert
+		\end{align*}
+		\boxed{y = -\ln \lvert \frac{1}{x} + C \rvert}
