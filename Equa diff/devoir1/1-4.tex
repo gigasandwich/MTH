@@ -1,5 +1,25 @@
 % \item $y' + y = 2e^x + 4 \sin(x)$
+\underline{Etape 1: ESSM} \\
 \begin{align*}
+	y' + y &= 0 \\
+	y' &= -y \\
+	\frac{dy}{y} &= -1 \\
+	\int \frac{1}{y} dy &= - \int 1 dx \\
+	ln \lvert y \lvert &= -x + C, \quad C \in \mathbb{R} \\
+	y &= -e^{-x}.e^C \\
+	y &= \lambda e^{-x} \quad \text{(1)}
+\end{align*}
+
+\underline{Etape 2: EASM MVC} \\
+\begin{align*}
+	y' = -\lambda e^{-x}	 + \lambda'e^{-x} \\
+	y' = e^{-x} (\lambda + \lambda') \text{(2)}
+\end{align*}
+
+\begin{align*}
+	\text{(1) et (2) dans (E):} \\
+	(-\lambda + \lambda)e^{-x} + \lambda e^{-x} &= 2e^x + 4\sin(x) \\
+	\lambda' &= 2e^x + 4sin(x) \\
     \frac{d\lambda}{dx}e^{-x} &= 2e^x + 4sin(x) \\
     \int d\lambda &= \int (2e^{2x} + 4e^x \sin(x)) \, dx \\
     \int \, d\lambda &= \int 2e^{2x} \, dx + 4\int e^x \sin(x)) \, dx \\
