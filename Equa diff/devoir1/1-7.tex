@@ -5,7 +5,7 @@
 	y' &= \frac{sin(y)}{cos(2y)} or cos(2y) =  1-2cos(y) , \\
 	y' &= \frac{sin(y)}{1-2cos^2(y)}  \\ \\
 \end{align*}
-	$ Posons u = cos(y)  $\\
+	$ \text{Posons } u = cos(y)  $\\
 	$ \text{Alors } \frac{du}{dy} = -sin(y) \Rightarrow dy = \frac{du}{-sin(y)} , $\\
 	$ \text{On a alors }: y = \int \frac{sin(y)}{1-2u^2} \cdot \frac{du}{-sin(y)}  $\\
 	$ y = \int\frac{1}{2u^2-1} $\\
@@ -18,31 +18,37 @@
 	y &= \frac{1}{\sqrt{2}}\int\frac{1}{(w-1)(w+1)} dw \\
 \end{align*}
 
+
+$ \text{\underline{Simplifions dabord la primitive}} $ \\
+$ \frac{1}{(w-1)(w+1)} = \frac{A}{w-1} + \frac{B}{w+1} (E), \quad A, B \in\mathbb{R} , $ \\
+$ \text{On multiplie chaque terme par (x-1)}  $ \\
+$ \frac{1}{(w-1)} = A + \frac{B(w-1)}{(w+1)} $ \\
+$ \text{Pour u = 1},  $ \\
+$ \frac{1}{2} = A \quad (1) $ \\
+$ \text{On multiplie chaque terme par (x+1)}  $ \\
+$ \frac{1}{(w+1)} = \frac{A(w+1)}{(w-1)} + B $ \\
+$ \text{Pour u = -1},  $ \\
+$ -\frac{1}{2} = B \quad (2) $ \\
+
+\text{(1) et (2) dans (E): } \\
 \begin{align*}
-	\text{\underline{Simplifions dabord la primitive}} \\
-	\frac{1}{(w-1)(w+1)} = \frac{A}{w-1} + \frac{B}{w+1} (E), A, B \in\mathbb{R} , \\
-	\text{On multiplie chaque terme par (x-1)}  \\
-	\frac{1}{(w-1)} = A + \frac{B(w-1)}{(w+1)} \\
-	\text{Pour u = 1},  \\
-	\frac{1}{2} = A(1) \\
-	\text{On multiplie chaque terme par (x+1)}  \\
-	\frac{1}{(w+1)} = \frac{A(w+1)}{(w-1)} + B \\
-	\text{Pour u = -1},  \\
-	-\frac{1}{2} = B(2) \\
+	\frac{1}{(w-1)(w+1)} &= \frac{\frac{1}{2}}{(w-1)} + \frac{-\frac{1}{2}}{(w+1)} \\
+	\frac{1}{(w-1)(w+1)} &= \frac{1}{2(w-1)} - \frac{1}{2(w+1)} \\
+	\text{On a alors: } y &= \frac{1}{\sqrt{2}}[\int\frac{1}{2(w-1)} - \int\frac{1}{2(w+1)}] \\
 \end{align*}
 
 \begin{align*}
-	\text{(1) et (2) dans (E)} \\
-	\frac{1}{(w-1)(w+1)} = \frac{\frac{1}{2}}{(w-1)} + \frac{-\frac{1}{2}}{(w+1)} \\
-	\frac{1}{(w-1)(w+1)} = \frac{1}{2(w-1)} - \frac{1}{2(w+1)} \\
-	\text{On a alors: } y = \frac{1}{\sqrt{2}}[\int\frac{1}{2(w-1)} - \int\frac{1}{2(w+1)}] \\
 	y &= \frac{1}{\sqrt{2}}[\frac{1}{2}\int\frac{1}{(w-1)} - \frac{1}{2}\int\frac{1}{(w+1)}] \\
 	y &= \frac{1}{2\sqrt{2}}[\int\frac{1}{(w-1)} - \int\frac{1}{(w+1)}] \\
 	y &= \frac{\sqrt{2}}{4}[ln|w-1| + C - ln|w+1| + K], \quad C, K \in \mathbb{R} \\
 	y &= \frac{\sqrt{2}}{4}[ln|w-1| - ln|w+1| + T], T \in \mathbb{R} \\
+\end{align*}
+
+\begin{align*}
 	\text{\underline{Retour au changement de variable}} \\
 	w = \sqrt{2}u \\
-	\text{Alors } y = \frac{\sqrt{2}}{4}(ln|\sqrt{2}u-1| - ln|\sqrt{2}u+1| + T), T \in \mathbb{R} \\
+	\text{Alors } y &= \frac{\sqrt{2}}{4}(ln|\sqrt{2}u-1| - ln|\sqrt{2}u+1| + T), T \in \mathbb{R} \\
 	u = cos(y) \\
-	\text{Alors } y = \boxed{\frac{\sqrt{2}}{4}(ln|\sqrt{2}cos(y)-1| - ln|\sqrt{2}cos(y)+1| + T), T \in \mathbb{R}}
+	\text{Alors } y &= \frac{\sqrt{2}}{4}(ln|\sqrt{2}cos(y)-1| - ln|\sqrt{2}cos(y)+1| + T), T \in \mathbb{R}
 \end{align*}
+\boxed{y = \frac{\sqrt{2}}{4}(ln|\sqrt{2}cos(y)-1| - ln|\sqrt{2}cos(y)+1| + T), T \in \mathbb{R}}

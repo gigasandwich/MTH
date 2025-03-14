@@ -1,0 +1,70 @@
+\begin{align*}
+	y' (1 - \sin x \cos x) + y^2 \cos x - y + \sin x &= 0 \\
+	(1 - \sin x \cos x)y' - y + \cos x y^2 &= - \sin x \quad (E)
+\end{align*}
+
+Posons $y = \frac{1}{z} + \cos x$, alors $y' = - \frac{z'}{z^2}$.
+
+Substituons dans (E) :
+\begin{align*}
+	(1 - \sin x \cos x)\left(-\frac{z'}{z^2}\right) - \left(\frac{1}{z} + \cos x\right) + \cos x \left(\frac{1}{z} + \cos x\right)^2 &= - \sin x.
+\end{align*}
+
+Developpons :
+\begin{align*}
+	-\frac{z'}{z^2} + \frac{z' \sin x \cos x}{z^2} + \sin^2 x \cos x - \frac{1}{z} - \cos x &+ \cos x \left(\frac{1}{z^2} + \frac{2 \cos x}{z} + \cos^2 x \right) = 0.
+\end{align*}
+
+Developpement de $\cos x \left(\frac{1}{z} + \cos x \right)^2$ :
+\begin{align*}
+	\cos x \left( \frac{1}{z^2} + \frac{2 \cos x}{z} + \cos^2 x \right) &= \frac{\cos x}{z^2} + \frac{2 \cos^2 x}{z} + \cos^3 x.
+\end{align*}
+
+Utilisons $\cos^3 x = (1 - \sin^2 x) \cos x$ :
+\begin{align*}
+	\cos^3 x &= \cos x - \sin^2 x \cos x.
+\end{align*}
+
+Ainsi, l’equation devient :
+\begin{align*}
+	- \frac{z'}{z^2} + \frac{z' \sin x \cos x}{z^2} - \frac{1}{z} + \sin^2 x \cos x - \cos x &+ \frac{\cos x}{z^2} + \frac{2 \cos^2 x}{z} + \cos x - \sin^2 x \cos x = 0.
+\end{align*}
+
+Simplifions :
+\begin{align*}
+	(\sin x \cos x - 1) z' + (2 \cos^2 x - 1) z &= - \cos x.
+\end{align*}
+
+Essayons une solution sous la forme $z_0 = \lambda e^{\varphi(x)}$, où
+\begin{align*}
+	\varphi(x) &= \int \frac{- (2 \cos^2 x - 1)}{(\sin x \cos x - 1)} dx.
+\end{align*}
+
+Posons $I = \int \frac{2 \cos^2 x - 1}{\sin x \cos x - 1} dx$.
+Utilisons l’identite $2 \cos^2 x - 1 = \cos 2x$ :
+\begin{align*}
+	I &= \int \frac{\cos 2x}{\sin 2x - 2} dx.
+\end{align*}
+
+En posant $u = \sin 2x - 2$, alors $du = 2 \cos 2x dx$ :
+\begin{align*}
+	I &= \int \frac{du}{u} = \ln |u| + C = \ln |\sin 2x - 2| + C.
+\end{align*}
+
+Ainsi,
+\begin{align*}
+	z_0 &= K (\sin 2x - 2)^{-1}.
+\end{align*}
+
+En reinjectant cette solution dans l’equation differentielle complète :
+\begin{align*}
+	(\sin x \cos x - 1) K' (\sin 2x - 2)^{-1} - 2K \cos 2x (\sin 2x - 2)^{-2} &= - \cos x.
+\end{align*}
+
+Finalement,
+\begin{align*}
+	K' &= -2 \cos x, \quad K = -2 \sin x + \varepsilon.
+\end{align*}
+
+Et donc :
+\boxed{y = \frac{\sin 2x - 2}{-2 \sin x + \varepsilon} + \cos x}
