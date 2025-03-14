@@ -1,0 +1,85 @@
+\underline{C'est une equation de Bernoulli}
+\begin{align*}
+	\frac {y'}{y^3} + \frac{y}{(x+1)y^3} &= \frac{1}{2}(x+3)^3 \\
+	\frac {y'}{y^3} + \frac{(x+1)^-1}{y^2} &= \frac{1}{2}(x+3)^3 \quad (E)\\ 
+\end{align*}
+\text{Changement de variable} \\
+\begin{align*}
+	u = \frac{1}{y^2} &= y^{-2} \\
+	\frac{du}{dx} &= -2y'y^{-3} \\
+	-\frac{1}{2}u' &= \frac{y'}{y^3} \quad (A)
+\end{align*}
+
+\text{D'ou} \\ 
+$(E1): \quad \frac{1}{-2}u' + (x+1)^{-1}u = \frac{1}{2}(x+1)^3$
+
+\underline{Etape 1: ESSM}
+\begin{align}
+	-\frac{1}{2}u' + (x+1)^{-1}u &= 0 \\
+	\frac{1}{2}u' &= (x+1)^{-1}u \\
+	\frac{du}{dx} &= 2(x+1)^{-1}u \\
+	\frac{du}{u} &= 2(x+1)^{-1}dx \\
+	\ln \lvert u \lvert &= 2 \ln \lvert x+1 \lvert + C, \quad C \in \mathbb{R} \\	
+	\ln \lvert u \lvert &= \ln \lvert (x+1)^2 \lvert + C \\
+	u &= e^{\ln \lvert (x+1)^2 \lvert} \times e^{C} \\
+	u &= (x+1)^2 \times \lambda, \quad \lambda = e^{C} \quad (E1_1)
+\end{align}
+
+\underline{Etape 2: EASM}
+\begin{align*}
+	u' &= \lambda'(x+1)^2 + 2(x+1) \lambda \quad (E1_2)
+\end{align*}
+
+\text{$(E1_1)$ et $(E1_2)$ dans (E1)} \\
+\begin{align*}
+	-\frac{1}{2}[\lambda'(x+1)^2 + 2(x+1)\lambda] + (x+1)^{-1}(x+1)^2\lambda &= \frac{1}{2}(x+1)^3 \\
+	-\frac{\lambda'}{2} (x+1)^2 - (x+1)\lambda + (x+1)\lambda &= \frac{1}{2}(x+1)^3 \\
+	- \frac{\lambda'}{2} (x+1)^2 &= \frac{1}{2}(x+1)^3 \\
+	\lambda' &= - (x+1) \\
+	\frac{d\lambda}{dx}	 &= -(x+1) \\
+	d\lambda &= -(x+1) dx \\
+	\int \, d\lambda &= - \int (x+1) \, dx \\
+	\lambda &= - (\frac{x^2}{2} + x) + K, \quad K \in \mathbb{R} \\	
+\end{align*}
+
+\text{La solution generale de (E1) est: }
+\[
+\underline{u = \left(- \left(\frac{x^2}{2} + x\right) + K\right) (x+1)^2}
+\]
+\begin{align*}
+	u &= (-\frac{x^2}{2} - x + K) (x+1)^2 \\
+	u' &= (-\frac{2}{2}x - 1) (x+1)^2 + 2 (x+1) (-\frac{x^2}{2} - x + K) \\
+	u' &= (-x - 1) (x+1)^2 + 2 (x+1) (-\frac{x^2}{2} - x + K) \\
+	u' &= -(x+1)^3 + 2 (x+1) (-\frac{x^2}{2} - x + K) \\
+	u' &= (x+1) [-(x+1)^2 + 2(-\frac{x^2}{2} - x + 2K)] \\
+	u' &= (x+1) [-(x+1)^2 -x^2 -2x + 2K] \\
+	u' &= (x+1) [-x^2 - 2x -1 -x^2 -2x + 2K] \\
+	u' &= (x+1) [-2x^2 - 4x -1 + 2K] \quad (B)
+\end{align*}
+
+\text{En reprenant (A)} 
+\begin{align*}
+	\frac{y'}{y^3} &= -\frac{1}{2}u'\\
+	\frac{dy}{dx} &= -\frac{1}{2}u' y^3 \\
+	\frac{dy}{y^3} &= - \frac{1}{2} u' dx \\
+	\int \frac{dy}{y^3} &= - \frac{1}{2} \int u' dx \\
+	\int y^{-3}{dy} &= - \frac{1}{2} \int u' dx \\
+	\frac{y^{-2}}{-2} &= - \frac{1}{2} \int u' dx \\
+	{y^{-2}} &=\int u' dx \quad (A')
+\end{align*}
+
+\text{(B) dans (A')}
+\begin{align*}
+	y^{-2} &= \int (x+1) [-2x^2 - 4x -1 + 2K] \, dx \\
+	&= \int (x+1)(-2x^2) + (x+1)(-4x) + (x+1)(-1) + (x+1)(2K) \, dx \\
+	&= \int \big( -2x^3 - 2x^2 - 4x^2 - 4x - x - 1 + 2Kx + 2K \big) \, dx \\
+	&= \int \big( -2x^3 - 6x^2 - 5x - 1 + 2Kx + 2K \big) \, dx \\
+	&= -\frac{2}{4}x^4 - \frac{6}{3}x^3 - \frac{5}{2}x^2 - x + Kx^2 + 2Kx + C \\
+	y^{-2} &= -\frac{1}{2}x^4 - 2x^3 - \frac{5}{2}x^2 - x + Kx^2 + 2Kx + C \\ 
+	\implies
+	y^2 &= (-\frac{1}{2}x^4 - 2x^3 - \frac{5}{2}x^2 - x + Kx^2 + 2Kx + C) ^{-1} \\
+	\implies
+	y &= \pm (-\frac{1}{2}x^4 - 2x^3 - \frac{5}{2}x^2 - x + Kx^2 + 2Kx + C) ^{-\frac{1}{2}}
+\end{align*}
+
+\boxed{y = \pm (-\frac{1}{2}x^4 - 2x^3 - \frac{5}{2}x^2 - x + Kx^2 + 2Kx + C) ^{-\frac{1}{2}}}
