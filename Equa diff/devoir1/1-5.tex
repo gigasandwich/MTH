@@ -1,4 +1,4 @@
-\underline{Etape 1: ESSM}
+\underline{Etape 1}: ESSM
 \begin{align*}
 	y' - 2y &= 0 \\
 	y' &= 2y \\
@@ -11,8 +11,7 @@
 	\text{\underline{$y = \lambda e^{2x}$}}
 \end{align*}
 
-\underline{Etape 2: EASM} \\
-\text{MVC}
+\underline{Etape 2}: EASM MVC \\
 
 $y' - 2y = 2x^3 + x \text{ avec } y = \lambda e^{2x}$
 
@@ -20,7 +19,7 @@ $y' - 2y = 2x^3 + x \text{ avec } y = \lambda e^{2x}$
 	y' &= \lambda e^{2x} + 2e^{2x}\lambda \quad (2)
 \end{align*}
 
-\text{(1) et (2) dans (E):}
+(1) et (2) dans (E):
 \begin{align*}
 	\lambda e^{2x} + 2e^{2x}\lambda - 2(\lambda e^{2x}) &= 2x^3 + x \\
 	\lambda e^{2x} &= 2x^3 + x \\
@@ -31,15 +30,15 @@ $y' - 2y = 2x^3 + x \text{ avec } y = \lambda e^{2x}$
 \end{align*}
 $\text{Posons } A = \int \frac{2x^3}{e^{2x}} dx \text{ et } B = \int \frac{x}{e^{2x}} dx$
 
-\text{(1) \underline{Calculons A}:}
+(1) \underline{Calculons A}:
 \begin{align*}
 	B &= \int \frac{x}{e^{2x}} dx \\
 	B &= \int e^{-2x} x dx \\
 	B &= -\frac{1}{2}\int -2e^{-2x} x dx \\
 \end{align*}
 
-\text{Posons } $K = \int -2e^{-2x} x dx$ \\
-\text{Rappelons l'integration par partie} \\
+Posons $K = \int -2e^{-2x} x dx$ \\
+Rappelons l'integration par partie \\
 $\int u'v = uv - \int v'u$ \\
 
 \begin{align*}
@@ -61,14 +60,14 @@ $\int u'v = uv - \int v'u$ \\
 \text{\underline{$B = -\frac{1}{2} e^{-2x}x - \frac{1}{4} e^{-2x}$}}
 
 \vspace{0.5cm}
-\text{(2) \underline{Calculons maintenant A}:}
+(2) \underline{Calculons maintenant A}:
 \begin{align*}
 	A &= \int 2x^3 \cdot e^{-2x} dx \\
 	A &= - \int - 2x^3 \cdot e^{-2x} dx
 \end{align*}
 
-\text{Posons } $M = \int 2x^3 \cdot e^{-2x} dx$ \\
-\text{Rappelons l'integration par partie} \\
+Posons $M = \int 2x^3 \cdot e^{-2x} dx$ \\
+Rappelons l'integration par partie \\
 $\int u'v = uv - \int v'u$ \\
 \begin{align*}
 	\text{avec } u' &= -2e^{-2x} \quad &u= e^{-2x} \\
@@ -81,7 +80,7 @@ $\int u'v = uv - \int v'u$ \\
 \end{align*}
 
 %N 
-\text{Posons } $N = \int -2 x^2e^{-2x} dx$ \\
+Posons $N = \int -2 x^2e^{-2x} dx$ \\
 \begin{align*}
 	\text{avec } u' &= -2e^{-2x} \quad &v= x^{2} \\
 	\text{alors } u &= e^{-2x} \quad &v'= 2x
@@ -91,20 +90,20 @@ $\int u'v = uv - \int v'u$ \\
 	N &= e^{-2x} x^2 - \int + 2xe^{-2x}dx \\
 	N &= e^{-2x} x^2 + \int - 2xe^{-2x}dx
 \end{align*}
-\text{D'apres le calcul de K, on peut avoir:} \\
-\text{\underline{$N = e^{-2x}x^2 + e^{-2x}x + \frac{1}{2} e^{-2x}$}} \\
+D'apres le calcul de K, on peut avoir: \\
+\underline{$N = e^{-2x}x^2 + e^{-2x}x + \frac{1}{2} e^{-2x}$} \\
 
-\text{On peut aussi alors ecrire:} \\
+On peut aussi alors ecrire: \\
 $M = e^{-2x}x^3 + \frac{3}{2}e^{-2x}x^2 + \frac{3}{2} e^{-2x} + \frac{3}{4}e^{-2x}$
 
-\text{Et on peut aussi avoir:} \\
+Et on peut aussi avoir: \\
 $A = -x^3e^{-2x} -\frac{3}{2}x^2e^{-2x} - \frac{3}{2}xe^{-2x} - \frac{3}{4}e^{-2x}$
 
-\text{On a alors trouve $\lambda = A + B$} \\
+On a alors trouve $\lambda = A + B$ \\
 \begin{align*}
 	\lambda &= -x^3e^{-2x} -\frac{3}{2}x^2e^{-2x} - \frac{3}{2}xe^{-2x} - \frac{3}{4}e^{-2x} -\frac{1}{2}xe^{-2x} - \frac{1}{4} e^{-2x} \\
 	\lambda &= -e^{-2x}(x^3 + \frac{3}{2}x^2 +2x +1)
 \end{align*}
 
-\text{Et comme $y = \lambda e^{2x}$} \\
+Et comme $y = \lambda e^{2x}$ \\
 \boxed{y = -x^3 - \frac{3}{2}x^2 -2x -1}
