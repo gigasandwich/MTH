@@ -1,0 +1,42 @@
+$\text{Lagrange} (E): y = x \varphi(y') +\psi(y)$ \\ \\
+$\text{1er cas: Si } \varphi(y') = y' \text{c-a-d} y = xy'+ \psi(y')$ \\
+$\text{alors on pose } p = y'$ \\
+$\text{donc on a } y' = xp + \varphi(p) \text{ et } y' = p + xp' + p'\psi'(p)$ \\
+$\text{mais comme } y' = p \text{ alors on a }  p = p + xp' + p'\psi(p)$ \\
+$\text{ou encore } 0 = p'(x + \psi'(p)) \text{ c-a-d } p' = 0 \text{ ou } x + \psi'(p) = 0$ \\
+$\text{donc p: constante ou } x = - \psi'(p)$ \\
+$\text{Si p = y' est une constante alors } y = Cx + K, K \in \mathbb{Q} \text{ ou si } x = -\psi'(p)$
+$\text{alors } y = -p\psi'(p) + \psi(p) \text{ (car } y = xp + \varphi(p) \text{)}$
+
+\begin{align*}
+	(E): y &= xy' + (y')^{3} \\
+	\text{On pose } p = y' \\
+	y = xp + p^3 &\implies y' = x + xp' + 3p^2p' \\
+	y' = p &\implies p = x + p'x + 3p'p^2
+\end{align*}
+
+$\text{Or } p'(x + \psi'(p)) = 0 \quad p' = 0 \text{ ou } x-3p^2 = 0$ \\
+\begin{align*}
+	x &= -3p^2 \quad /y = xp + p^3 \\
+	3p^2 &= -x \\
+	p^2 &= -\frac{x}{3}
+\end{align*}
+
+\begin{align*}
+	y &= xp + p(-\frac{x}{3}) \\
+	  &= xp - \frac{x}{3}p \\
+	y &= \frac{2xp}{3} \\
+	p &= \frac{3y}{2x}
+\end{align*}
+
+\begin{align*}
+	\text{Nous rappelons que } p^2 = -\frac{x}{3} \\
+	(\frac{3y}{2x})^2 &= -\frac{x}{3} \\
+	\frac{9y^2}{4x^2} &= -\frac{x}{3} \\
+	27y^2 &= -4x^3 \\
+	y^2 &= -\frac{4}{27}x^3
+\end{align*}
+
+$\text{Solution generale: }$ \\
+$y = Cx + C^3, \quad C \in \mathbb{R}$ \\ \\
+\boxed{y^2 = -\frac{4}{27} x^3}

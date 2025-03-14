@@ -1,0 +1,41 @@
+\underline{Etape 1: ESSM}
+
+\begin{align*}
+	y' - 2xy &= 0 \\
+	y' &= 2xy \\
+	\frac{dy}{dx} &= 2xy \\
+	\int \frac{dy}{y} &= \int 2xdx \\
+	\ln|y| &= x^2 + k, \quad k \in \mathbb{R} \\
+	y_0 &= e^{x^2} + e^k \\
+	y_0 &= e^{x^2} \cdot c, \quad c = e^k
+\end{align*}
+
+\underline{Etape 2: EASM} \\
+$y' - 2xy = e^{x-x^2} \quad (E) $ \\
+\text{MVC: }
+
+\begin{align*}
+	y &= ce^{x^2} \quad (1) \\
+	y' &= c'e^{x^2} + c2xe^{x^2} \quad (2)
+\end{align*}
+
+\text{(1) et (2) dans (E):} \\
+\begin{align*}
+	c'e^{x^2} + c2xe^{x^2} - c2xe^{x^2} &= e^{x - x^2} \\
+	c'e^{x^2} &= e^{x-x^2} \\
+	\frac{dc}{dx} \cdot e^{x^2} &= e^{x - x^2} \\
+	\int dc &= \int \frac{e^{x - x^2}}{e^{x^2}} \, dx \\
+	c &= \int \frac{e^x}{e^{x^2} \cdot e^{x^2}} \\
+	c &= \int \frac{e^x}{e^{2x^2}} \, dx \\
+	c &= \int \frac{1}{e^{2x^2}} + \int e^x \, dx \\
+	c &= \int e^{-2x} + \int e^x \, dx \\
+	c &= - \frac{-e^{-2x^2}}{4x} + e^x + \lambda, \quad \lambda \in \mathbb{R}
+\end{align*}
+
+$\text{Or } y = c \cdot e^{x^2}$ \\
+\begin{align*}
+	y &= ( - \frac{e^{-2x^2} \cdot e^{x^2}}{4x} + e^x \cdot e^{x^2} )  + \lambda e^{x^2} \\
+	&= ( - \frac{e^{x^2 - 2x^2}}{4x} + e^x \cdot e^{x^2} )  + \lambda e^{x^2} \\
+	y &= y_p + y_0
+\end{align*}
+\boxed{y = (-\frac{e^{-x^2}}{4x} + e^{x^2 + x} + \lambda e^{x^2}), \quad \lambda \in \mathbb{R}}
