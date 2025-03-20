@@ -1,20 +1,109 @@
-\underline{Etape 1: ESSM}
+\underline{Etape 1}: ESSM
 \begin{align*}
-	y &= \lambda e^{\int(-\frac{-2}{1})} \\
-	y &= \lambda e^{2x} \quad (1)
+	y' - 2y &= 0 \\
+	y' &= 2y \\
+	\frac{dy}{dx} &= 2y \\
+	\int \frac{dy}{y} &= \int 2dx \\
+	\ln |y| &= 2x+ c, \quad c \in \mathbb{R} \\
+	y = e^{2x+c} \\
+	y = e^{2x} \cdot e^c \\
+	\text{On pose } \lambda = e^c \\
+	\text{\underline{$y = \lambda e^{2x}$}}
 \end{align*}
 
-\underline{Etape 2: EASM} \\
-\text{MVC}
+\underline{Etape 2}: EASM MVC \\
+
+$y' - 2y = 2x^3 + x \text{ avec } y = \lambda e^{2x}$
+
 \begin{align*}
 	y' &= \lambda e^{2x} + 2e^{2x}\lambda \quad (2)
 \end{align*}
 
-\text{(1) et (2) dans (E):}
+(1) et (2) dans (E):
 \begin{align*}
 	\lambda e^{2x} + 2e^{2x}\lambda - 2(\lambda e^{2x}) &= 2x^3 + x \\
 	\lambda e^{2x} &= 2x^3 + x \\
 	\frac{d\lambda}{dx} &= \frac{2x^3 + x}{e^{2x}} \\
 	d\lambda &= \frac{2x^3 + x}{e^{2x}} dx \\
 	\int d\lambda &= \int \frac{2x^3 +x}{e^{2x}} dx \\
+	\lambda &= \int \frac{2x^3}{e^{2x}} dx + \int \frac{x}{e^{2x}} dx
 \end{align*}
+$\text{Posons } A = \int \frac{2x^3}{e^{2x}} dx \text{ et } B = \int \frac{x}{e^{2x}} dx$
+
+(1) \underline{Calculons A}:
+\begin{align*}
+	B &= \int \frac{x}{e^{2x}} dx \\
+	B &= \int e^{-2x} x dx \\
+	B &= -\frac{1}{2}\int -2e^{-2x} x dx \\
+\end{align*}
+
+Posons $K = \int -2e^{-2x} x dx$ \\
+Rappelons l'integration par partie \\
+$\int u'v = uv - \int v'u$ \\
+
+\begin{align*}
+	\text{avec } u' &= -2e^{-2x} \quad &v= x \\
+	\text{alors } u &= e^-{2x} \quad &v'= 1
+\end{align*}
+
+\begin{align*}
+	K &= e^{-2x}x - \int 1e^{-2x} \\
+	K &= e^{-2x}x + \frac{1}{2} \int -2e^{-2x} \\
+	K &= e^{-2x}x + \frac{1}{2} e^{-2x} \\
+	\text{\underline{$K = e^{-2x}x + \frac{1}{2} e^{-2x}$}}
+\end{align*}
+
+\begin{align*}
+	\text{Donc } B &= -\frac{1}{2}(e^{-2x}x + \frac{1}{2} e^{-2x}) \\
+	B &= -\frac{1}{2} x e^{-2x} - \frac{1}{4} e^{-2x}
+\end{align*}
+\text{\underline{$B = -\frac{1}{2} e^{-2x}x - \frac{1}{4} e^{-2x}$}}
+
+\vspace{0.5cm}
+(2) \underline{Calculons maintenant A}:
+\begin{align*}
+	A &= \int 2x^3 \cdot e^{-2x} dx \\
+	A &= - \int - 2x^3 \cdot e^{-2x} dx
+\end{align*}
+
+Posons $M = \int 2x^3 \cdot e^{-2x} dx$ \\
+Rappelons l'integration par partie \\
+$\int u'v = uv - \int v'u$ \\
+\begin{align*}
+	\text{avec } u' &= -2e^{-2x} \quad &u= e^{-2x} \\
+	\text{alors } v &= x^3 \quad &v'= 3x^2
+\end{align*}
+
+\begin{align*}
+	M &= e^{-2x}x^3 - \int 3x^2e^{-2x} dx \\
+	M &= e^{-2x}x^3 + \frac{3}{2}\int -2 x^2e^{-2x} dx \\
+\end{align*}
+
+%N 
+Posons $N = \int -2 x^2e^{-2x} dx$ \\
+\begin{align*}
+	\text{avec } u' &= -2e^{-2x} \quad &v= x^{2} \\
+	\text{alors } u &= e^{-2x} \quad &v'= 2x
+\end{align*}
+
+\begin{align*}
+	N &= e^{-2x} x^2 - \int + 2xe^{-2x}dx \\
+	N &= e^{-2x} x^2 + \int - 2xe^{-2x}dx
+\end{align*}
+D'apres le calcul de K, on peut avoir: \\
+\underline{$N = e^{-2x}x^2 + e^{-2x}x + \frac{1}{2} e^{-2x}$} \\
+
+On peut aussi alors ecrire: \\
+$M = e^{-2x}x^3 + \frac{3}{2}e^{-2x}x^2 + \frac{3}{2} e^{-2x} + \frac{3}{4}e^{-2x}$
+
+Et on peut aussi avoir: \\
+$A = -x^3e^{-2x} -\frac{3}{2}x^2e^{-2x} - \frac{3}{2}xe^{-2x} - \frac{3}{4}e^{-2x}$
+
+On a alors trouve $\lambda = A + B$ \\
+\begin{align*}
+	\lambda &= -x^3e^{-2x} -\frac{3}{2}x^2e^{-2x} - \frac{3}{2}xe^{-2x} - \frac{3}{4}e^{-2x} -\frac{1}{2}xe^{-2x} - \frac{1}{4} e^{-2x} \\
+	\lambda &= -e^{-2x}(x^3 + \frac{3}{2}x^2 +2x +1)
+\end{align*}
+
+Et comme $y = \lambda e^{2x}$ \\
+\boxed{y = -x^3 - \frac{3}{2}x^2 -2x -1}
