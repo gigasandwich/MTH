@@ -1,0 +1,90 @@
+\underline{Etape 1} : ESSM:
+
+$$
+y^{\prime \prime} + 2 y^t + 5 y = 0
+$$
+
+\underline{Equation caracteristique}:
+
+\[
+\begin{aligned}
+    r^2 + 2r + 5 &= 0 \\
+    \Delta &= 2^2 - 4 \times 1 \times 5 = 4 - 20 = -16 \\
+    r &= \frac{-2 \pm \sqrt{-16}}{2 \times 1} = \frac{-2 \pm 4i}{2} = -1 \pm 2i
+\end{aligned}
+\]
+
+D'ou on a:
+
+$$
+y = e^{-x} (E \cos (2x) + F \sin (2x))
+$$
+
+\underline{Etape 2} : EASM:
+
+$y'' + 2y' + 5y = \cos (x) \quad (E)$ \\
+
+\[
+\begin{aligned}
+    y_p &= A \cos (x) + B \sin (x) \quad (1) \\
+    y_p' &= -A \sin (x) + B \cos (x) \quad (2) \\
+    y_p'' &= -A \cos (x) - B \sin (x) \quad (3)
+\end{aligned}
+\]
+
+(1), (2), (3) dans (E):
+
+\[
+\begin{aligned}
+    (-A \cos (x) - B \sin (x)) + 2(-A \sin (x) + B \cos (x)) + 5(A \cos (x) + B \sin (x)) &= \cos (x) \\
+    (-A + 2B + 5A) \cos (x) + (-B - 2A + 5B) \sin (x) &= \cos (x) \\
+    (4A + 2B) \cos (x) + (4B - 2A) \sin (x) &= \cos (x)
+\end{aligned}
+\]
+
+Systeme:
+
+\[
+\begin{aligned}
+    4A + 2B &= 1 \\
+   -2A + 4B &= 0
+\end{aligned}
+\]
+
+Resolution:
+
+\[
+\begin{aligned}
+    -2A + 4B &= 0 \Rightarrow A = 2B \\
+    4(2B) + 2B &= 1 \Rightarrow 8B + 2B = 1 \\
+    10B &= 1 \Rightarrow B = \frac{1}{10} \\
+    A &= 2B = \frac{2}{10} = \frac{1}{5}
+\end{aligned}
+\]
+
+D'ou:
+
+\[
+\begin{aligned}
+    y &= e^{-x} (E \cos (2x) + F \sin (2x)) + \frac{1}{5} \cos (x) + \frac{1}{10} \sin (x) \\
+    y(0) &= e^0 (E \cos (0) + F \sin (0)) + \frac{1}{5} \cos (0) + \frac{1}{10} \sin (0) = 0 \\
+    E + \frac{1}{5} &= 0 \Rightarrow E = -\frac{1}{5}
+\end{aligned}
+\]
+
+Derivee:
+
+\[
+\begin{aligned}
+    y'(0) &= 0 \\
+    y' &= e^{-x} (E \cos (2x) + F \sin (2x)) - e^{-x} (-2E \sin (2x) + 2F \cos (2x)) - \frac{1}{5} \sin (x) + \frac{1}{10} \cos (x) \\
+    y'(0) &= e^{0} (E \cos (0) + F \sin (0)) - e^{0} (-2E \sin (0) + 2F \cos (0)) - \frac{1}{5} \sin (0) + \frac{1}{10} \cos (0) \\
+    -E + 2F + \frac{1}{10} & = 10 \\
+    - (-\frac{1}{5}) + 2F + \frac{1}{10} &= 0 \implies \frac{1}{5} + 2F + \frac{1}{10} = 0 \\
+    2F &= -\frac{1}{5} - \frac{1}{10} \\
+    2F & = -\frac{3}{10} \\
+    F &= -\frac{3}{20}
+\end{aligned}
+\]
+
+\boxed{y = e^{-x} (-\frac{1}{5} \cos(2x) - \frac{3}{20}\sin(2x)) + \frac{1}{5}\cos(x) + \frac{1}{10}\sin(x)}
