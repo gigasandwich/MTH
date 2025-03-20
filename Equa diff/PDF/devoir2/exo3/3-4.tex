@@ -1,0 +1,60 @@
+
+\underline{Etape 1 : ESSM} \\
+$y'' - 4y +13y = 0$
+
+\underline{Equation caracteristique :}
+
+\begin{align*}
+    r^2 - 4r + 13 &= 0 \\
+    \Delta &= (-4)^2 - 4 \times 1 \times 13 = 16 - 52 \\
+    r &= \frac{4 \pm \sqrt{-36}}{2} = \frac{4 \pm 6i}{2} = 2 \pm 3i
+\end{align*}
+
+$\Delta < 0$, donc $y = e^{2x}(A \cos 3x + B \sin 3x)$
+\\
+
+\underline{Etape 2 : EASM}
+
+\begin{align*}
+    y'' - 4y' + 13y &= \cos(3x) \\
+    f(x) &= \cos(3x) \\
+    y_p &= m \cos(3x) + n \sin(3x) \\
+    y'_p &= -3m \sin(3x) + 3n \cos(3x) \\
+    y''_p &= -9m \cos(3x) - 9n \sin(3x)
+\end{align*}
+
+Substituons dans l'equation :
+
+\begin{align*}
+    (-9m \cos(3x) - 9n \sin(3x)) - 4(-3m \sin(3x) + 3n \cos(3x)) + 13 (m \cos(3x) + n \sin(3x)) &= \cos(3x) \\
+    (-9m + 12n + 13m) \cos(3x) + (-9n - 12m + 13n) \sin(3x) &= \cos(3x) \\
+    (4m + 12n) \cos(3x) + (4n - 12m) \sin(3x) &= \cos(3x)
+\end{align*}
+
+On obtient le systeme :
+
+\begin{align*}
+4m + 12n &= 1 \\
+-12m + 4n &= 0
+\end{align*}
+
+Resolution :
+
+\begin{align*}
+	-12m + 4n &= 0 \\
+	4n &= 12m \\
+	n &= 3m
+\end{align*}
+
+Substitution dans la premiere equation :
+
+\begin{align*}
+	4m + 12(3m) &= 1 \\
+	4m + 36m &= 1 \\
+	40m &= 1 \\
+	m &= \frac{1}{40}
+\end{align*}
+
+Donc, on a solution :
+
+\boxed{y = e^{2x} (A \cos(3x) + B \sin(3x)) + \frac{1}{40} \cos(3x) + \frac{3}{40} \sin(3x)}
