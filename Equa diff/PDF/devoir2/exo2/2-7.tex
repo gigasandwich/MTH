@@ -1,0 +1,29 @@
+\begin{align*}
+    2xy' &= y + y' \\
+    -y' + 2xy' &= y \\
+    y'(-1 + 2x) &= y \\
+    y' \frac{(-1 + 2x)}{(-1 + 2x)} &= \frac{1}{(-1 + 2x)} \cdot y \\
+    y' &= \frac{1}{(-1 + 2x)} \cdot y
+\end{align*}
+
+\underline{Calcul de la solution generale :}
+
+\begin{align*}
+    y &= \lambda e^{-\int\frac{1}{\frac{1}{(-1+2x)}}},\quad \lambda \in \mathbb{R} \\
+    &= \lambda e^{-\int (-1 + 2x)},\quad \lambda \in \mathbb{R}
+\end{align*}
+
+\underline{Calculons d'abord l'integrale :}
+
+\begin{align*}
+    -\int (-1 + 2x) &= -(-x + x^2) \\
+    &= x - x^2
+\end{align*}
+
+\underline{Alors :}
+
+\begin{align*}
+    y &= \lambda e^{x - x^2},\quad \lambda \in \mathbb{R}
+\end{align*}
+
+\boxed{y = \lambda e^{x - x^2},\quad \lambda \in \mathbb{R}}
