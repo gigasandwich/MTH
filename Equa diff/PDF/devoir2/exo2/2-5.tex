@@ -1,0 +1,65 @@
+\underline{Forme de Lagrange} \\ \\
+Une equation differentielle du premier ordre de Lagrange est donnee par :
+\begin{equation}
+    y = x \varphi(y') + \psi(y').
+\end{equation}
+Avec $p = y'$, on a :
+\begin{align*}
+    p &= x p + \sqrt{1 + p^2} \\
+    p - x p &= \sqrt{1 + p^2} \\
+    p (1 - x) &= \sqrt{1 + p^2} \\
+    p^2 (1 - x)^2 &= 1 + p^2, \\
+    p^2 - 2x p^2 + x^2 p^2 &= 1 + p^2, \\
+    p^2 (x^2 - 2x) &= 1, \\
+    p^2 &= \frac{1}{x^2 - 2x}, \\
+\end{align*}
+
+Avec
+\[
+\begin{array}{c|c|c|c|c}
+    x & -\infty & 0 & 2 & +\infty \\
+    \hline
+    x & - & 0 & + & + \\
+    \hline
+    x - 2 & - & - & 0 & + \\
+    \hline
+    x(x-2) & + & - & - & + \\
+\end{array}
+\]
+Pour que $p^2 > 0$ alors $x^2-2x = x(x-2) > 0$
+
+On a
+\begin{align*}
+    x^2 -2x &= \frac{1}{p^2} \\
+    x^2 -2x - \frac{1}{p^2} &= 0
+\end{align*}
+
+\begin{align*}
+    \Delta &= (-2)^2 - 4 (\frac{1}{p^2}) \\
+    &= 4 + \frac{4}{p^2} \\
+    &= \frac{4p^2+4}{p^2} \\ 
+    \Delta &= 4\frac{p^2 +1}{p^2} \\
+    \sqrt\Delta &= \frac{2}{p}\sqrt{p^2+1}
+\end{align*}
+
+\begin{align*}
+    x &= \frac{2 \pm \frac{2}{p}\sqrt{p^2+1} }{2} \\
+    x &= \frac{2p \pm 2\sqrt{p^2+1}}{2p} \\
+    x &= \frac{2p}{2p} \pm \frac{2\sqrt{p^2+1}}{2p} \\
+    x &= 1 \pm 2\sqrt{ \frac{p^2}{p^2} + \frac{1}{p^2} } \\
+    x &= 1 \pm 2\sqrt{ 1 + \frac{1}{p^2} } \\
+\end{align*}
+Alors  $x = 1 - 2\sqrt{ 1 + \frac{1}{p^2} } < 0 $ OU $x = 1 + 2\sqrt{ 1 + \frac{1}{p^2} } > 0$ \\
+sattisfaissent $x \in ]-\infty; 0[ U ]0; + \infty[$
+
+\begin{align*}
+    &\text{Si } x < 0, \text{alors il n'y a aucune solution pour (E)} \\
+    &\text{Si } p = y' = 0, \text{alors  y: constante alors} y = Cx+K \quad C,K \in \mathbb{R} \\
+    &\text{Si } x > 0
+\end{align*}
+\begin{align*}
+    y &= xy' + \sqrt{a+(y')^2} \\
+    y &= 1 \pm 2(\sqrt{1+\frac{1}{p^2}})(p) + \sqrt{1+p^2} \\
+    y &= 1 \pm 2(\sqrt{p^2+\frac{p^2}{p^2}}) + \sqrt{1+p^2} \\
+    y &= 1 \pm 2(\sqrt{p^2+ 1}) + \sqrt{1+p^2}
+\end{align*}
